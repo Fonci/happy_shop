@@ -1,0 +1,48 @@
+/* pages/category/index.wxss */
+page {
+  height: 100%;
+}
+.cate {
+  height: 100%;
+}
+.cate .scroll {
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.cate .scroll .left_menu {
+  flex: 2;
+}
+.cate .scroll .left_menu .left_name {
+  height: 80rpx;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cate .scroll .left_menu .active {
+  color: var(--themeColor);
+}
+.cate .scroll .right_content {
+  flex: 5;
+}
+.cate .scroll .right_content .content_title {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cate .scroll .right_content .content_title .divider {
+  padding: 0 10rpx;
+  color: #ccc;
+}
+.cate .scroll .right_content .content_lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cate .scroll .right_content .content_lists navigator {
+  width: 33.33%;
+  text-align: center;
+}
+.cate .scroll .right_content .content_lists navigator image {
+  width: 50%;
+}

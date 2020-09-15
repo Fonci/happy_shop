@@ -1,0 +1,63 @@
+swiper {
+  width: 100%;
+  height: 340rpx;
+
+  image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.item_cata {
+  display: flex;
+  padding: 20rpx;
+
+  navigator {
+    flex: 1;
+
+    image {
+      width: 100%;
+    }
+  }
+}
+
+.index_floor {
+  .floor_title {
+    padding: 10rpx 0;
+
+    image {
+      width: 100%;
+    }
+  }
+
+  .floor_list {
+    overflow: hidden;
+
+    navigator {
+      float: left;
+      width: 33.33%;
+
+      // &:nth-child(1) {
+      //   height: 386*33.33vw/232
+      // }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        border-bottom: 10rpx solid white;
+      }
+
+      // 第一张图片大小 232*386;   232/386=33vw/height
+      // 第一张图片的高度 为height:386*33vw/232;
+      &:nth-last-child(-n+4) {
+        // 后四张图片的高度为第一张图片的一半  /2
+        height: 386*33.33vw/232/2;
+        border-left: 10rpx solid white;
+      }
+
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

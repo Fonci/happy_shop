@@ -1,0 +1,35 @@
+<view class="yg_index">
+    <!-- 搜索 开始 -->
+    <searchInput></searchInput>
+    <!-- 搜索 结束 -->
+    <!-- 轮播图 开始 -->
+    <swiper autoplay indicator-dots circular>
+        <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+            <image src="{{item.image_src}}" mode="widthFix" lazy-load="true"></image>
+        </swiper-item>
+    </swiper>
+    <!-- 轮播图 结束 -->
+    <!-- 分类导航  开始 -->
+    <view class="item_cata">
+        <navigator wx:for='{{cataList}}' wx:key="index" url="" open-type="navigate">
+            <image mode="widthFix" src="{{item.image_src}}" lazy-load></image>
+        </navigator>
+    </view>
+    <!-- 分类导航  结束 -->
+    <!-- 楼层导航 开始 -->
+    <view class="index_floor">
+        <view class="floor_group" wx:for="{{floorList}}" wx:for-item="floorTitle" wx:key="index">
+            <!-- 标题 -->
+            <view class="floor_title">
+                <image src="{{floorTitle.floor_title.image_src}}" mode="widthFix" lazy-load></image>
+            </view>
+            <!-- 内容 -->
+            <view class="floor_list" >
+                <navigator url="" open-type="navigate" wx:for="{{floorTitle.product_list}}" wx:for-index="index2"  wx:key="index2">
+                    <image class="" src="{{item.image_src}}" mode="{{index2===0?'widthFix':'scaleToFill'}}" lazy-load="false" binderror="" bindload=""></image>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <!-- 楼层导航 结束 -->
+</view>
